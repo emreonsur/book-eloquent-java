@@ -4,9 +4,9 @@
 
 **Reader:** Emre Önsür
 
-> 2026-11-26 Potsdam, Germany
-
 ## What is JavaScript?
+
+> 2026-11-26 Potsdam, Germany
 
 Javascript was introduced in 1995 as a way to add programs to web pages in the *Netscape Navigator Browser*. It has made modern web applications possible—that is, applications with which you can interact directly without doing a page reload for every action.
 
@@ -25,4 +25,5 @@ There are two core atomic elements in JavaScript:
 
 ### Numbers
 
- 
+> 2026-11-27 Potsdam, Germany
+
