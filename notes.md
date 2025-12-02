@@ -87,3 +87,80 @@ console.log(Infinity % Infinity); // NaN
 
 ### Strings
 
+> Strings are written by enclosing their content in quotes
+
+```javascript
+console.log("Hello, World!");
+console.log('Hello, World!');
+console.log(`Hello, World!`);
+```
+
+> Newlines can be included in a string with backticks
+
+```javascript
+console.log(`Line 1
+Line 2`);
+```
+
+> Characters can be escaped inside a quoted text using a backslash (`\`).
+
+```javascript
+console.log("Line 1\nLine 2");
+console.log("Line 3\nLine 4");
+console.log(`Line 5\nLine 6`);
+```
+
+> Escaping backslash
+
+```javascript
+console.log('A newline can be expressed with "\\n"');
+```
+
+> `+` operator can be used to *concatenate* two strings together.
+
+```javascript
+console.log("Hello" + " " + "World!");
+```
+
+Strings written with single or double quotes behave very much the same — the only difference lies in which type of quote you need to escape inside of them.
+
+> Single quotes (`'`) can be written directly in a double-quoted string — without escaping.
+
+```javascript
+console.log("This is a man's world.");
+```
+
+> Double quotes (`"`) can be written directly in a single-quoted string — without escaping.
+
+```javascript
+console.log('My name is "Emre"');
+```
+
+Backtick-quoted strings are usually called *template literals* and can do a few more tricks apart from being able to span newlines.
+
+> Backtick-quoted strings can embed values.
+
+```javascript
+console.log(`Half of 100 is ${100 / 2}.`);
+```
+
+### Unary Operators
+
+> `typeof` operator produces a string value naming the type of the value it receives as an argument.
+
+```javascript
+console.log(typeof 4.5);
+console.log(typeof "Emre");
+```
+
+> Unary `-` operator produces the value of a number with the opposite sign.
+
+```javascript
+console.log(-4);
+console.log(-(-4));
+```
+
+### Boolean Values
+
+#### Comparison
+
