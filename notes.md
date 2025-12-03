@@ -162,5 +162,77 @@ console.log(-(-4));
 
 ### Boolean Values
 
+> 2025-12-03
+
+JavaScript's *Boolean* type has only two values as `true` and `false`.
+
 #### Comparison
+
+`<` (less than) and `>` (greater than) operators produce Boolean values.
+
+> On numbers, these operators make simple comparisons.
+
+```javascript
+console.log(2 < 3);
+console.log(2 > 3);
+```
+
+> Strings can be also compared in the same way. When two strings are compared, JavaScript goes over the characters  from left to right, comparing the Unicode codes one by one.
+
+```javascript
+console.log("A" < "a");
+console.log("Anastasia" > "Natasha");
+```
+
+Other similar operators are:
+
+- >=
+- <=
+- ==
+- !=
+
+> There is only one value in JavaScript that is not equal to itself, and that is the value `NaN`.
+
+```javascript
+console.log(NaN == NaN); // false
+```
+
+#### Logical Operators
+
+JavaScript supports three logical operators:
+
+- and (``&&`)
+- or (`||`)
+- not (`!`)
+
+> The `&&` operator represents logical *and*. It is a binary operator, and its result is `true` only if both the values given to it are `true`.
+
+```javascript
+console.log(true && false); // false
+console.log(true && true); // true
+```
+
+> The `||` operator denotes logical *or*. It is also a binary operator, and it produces `true` if either of the values given to it is `true`.
+
+```javascript
+console.log(false && true); // true
+console.log(false && false); // false
+```
+
+> The `!` operator denotes logical *not*. It is a unary prefix operator, and it produces the logical opposite of the value given to it.
+> `!true` produces `false`
+> `!false` produces `true`
+
+```javascript
+console.log(!true);
+console.log(!false);
+```
+
+The *conditional* operator (the ternary operator) uses the value to the left of the question mark to decide which of the two other values to produce.
+
+```javascript
+console.log(true ? 1 : 2); // 1
+console.log(false ? 1 : 2); // 2
+```
+
 
