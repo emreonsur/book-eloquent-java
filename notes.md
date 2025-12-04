@@ -235,4 +235,77 @@ console.log(true ? 1 : 2); // 1
 console.log(false ? 1 : 2); // 2
 ```
 
+### Empty Values
+
+Two special values, `null` and `undefined`, are used to denote the absence of a *meaningful* value. They are themselves values, but carry no information. They can be treated as interchangeable.
+
+### Automatic Type Conversion
+
+JavaScript goes out of its way to accept almost any program given to it, even programs that do odd things.
+
+When an operator is applied to the "wrong" type of value, JavaScript will quietly convert that value to the type it needs, using a set of rules that often aren't what you want or expect. This is called *type coercion*.
+
+> The `null` below becomes `0`.
+
+```javascript
+console.log(8 * null); // 0
+```
+
+> `"5"` below becomes `5` (from string to number).
+
+```javascript
+console.log("5" - 1); // 4
+```
+
+> `+` operator below tries string concatenation before numeric addition, so `1` becomes `"1"` (from number to string).
+
+```javascript
+console.log("5" + 1);
+```
+
+> `"five"` below is to become a number, and when something that doesn't map to a number in an obvious way (such as `"five"` or `undefined`) is converted to a number, it becomes `NaN`. Therefore, Further arithmetic operations on `NaN` keep producing `NaN`.
+
+```javascript
+console.log("five" * 2); // NaN
+```
+
+> When comparing values of different types, in most cases, JavaScript tries to convert one of the values to the other value's type.
+
+```javascript
+console.log(false == 0); // true
+```
+
+> In addition to above, however, when `null` and `undefined` occurs on either side the `==` operator, it produces `true` only if both sides are either `null` or `undefined`.
+
+```javascript
+console.log(null == undefined); // true
+console.log(null == 0); // false
+```
+
+> So, recall that `null` below becomes `0` because of the `*` operator.
+
+```javascript
+console.log(8 * null); // 0
+```
+
+> But, the `null` below is not treated as `0` and the `==` operator produces `false` since when `null` or `undefined` occurs on either side of the `==` operator, it produces true only if both sides are either `null` or `undefined`.
+
+```javascript
+console.log(null == 0); // false
+```
+
+**When any automatic type conversions are not wanted to happen, there are two additional operators:**
+
+- `===`
+- `!==`
+
+```javascript
+console.log(0 == false); // true
+console.log(0 === false); // false
+console.log(0 != false); // false
+console.log(0 !== false); // true
+```
+
+#### Short-Circuiting of Logical Operators
+
 
