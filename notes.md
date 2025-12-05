@@ -308,4 +308,20 @@ console.log(0 !== false); // true
 
 #### Short-Circuiting of Logical Operators
 
+For non-Boolean values, the logical operators `&&` and `||` first convert the left operand to Boolean type in order to decide what to do, but depending on the operator and the result of that conversion, they return either the *original* left-hand value or the right-hand value.
+
+> The `||` operator returns the value of the left operand when that can be converted to `true` and returns the value of the right operand otherwise.
+
+```javascript
+console.log(null || "Emre"); // Emre
+console.log("Elif" || "Emre"); // Elif
+```
+
+This functionality can be used for getting a default value. If we have a value that might be empty, putting `||` with a replacement value after it produces that replacement value when the initial value is converted to `false`.
+
+The values below count as false according to the rules for converting strings and numbers to Boolean values:
+
+- 0
+- NaN
+- The empty string (`""`)
 
