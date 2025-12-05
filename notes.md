@@ -325,3 +325,50 @@ The values below count as false according to the rules for converting strings an
 - NaN
 - The empty string (`""`)
 
+```javascript
+console.log(0 || 1); // Outputs: 1
+console.log(NaN || 42); // Outputs: 42
+console.log("" || "default"); // Outputs: default
+console.log(null || "fallback"); // Outputs: fallback
+console.log(undefined || true); // Outputs: true
+console.log(false || "yes"); // Outputs: yes
+```
+
+> The `??` operator resembles `||` but returns the value on the right only if the one on the left is `undefined` or `null`.
+
+```javascript
+console.log(0 ?? 1); // Outputs: 0
+console.log(NaN ?? 42); // Outputs: NaN
+console.log("" ?? "default"); // Outputs: ""
+console.log(null ?? "fallback"); // Outputs: fallback
+console.log(undefined ?? true); // Outputs: true
+console.log(false ?? "yes"); // Outputs: yes
+```
+
+> The `&&` operator works similarly to the `||` but the other way around. It produces the original left-hand value when it is a *falsy* value, and otherwise it produces the value of the right operand.
+
+```javascript
+console.log(1 && 0); // -> 0
+console.log(0 && 1); // -> 0
+console.log(NaN && 42); // -> NaN
+console.log("" && "default"); // -> "" (empty string)
+console.log("Emre" && "Elif"); // -> "Elif"
+console.log(null && "fallback"); // -> null
+console.log(undefined && true); // -> undefined
+console.log(false && "yes"); // -> false
+```
+
+## Program Structure
+
+> 2026-12-05 Potsdam, Germany
+
+### Expressions and Statements
+
+A fragment of code that produces a value is called an *expression*.
+
+If an expression corresponds to a sentence fragment, a JavaScript *statement* corresponds to a full sentence. A program is a list of statements.
+
+The simplest kind of statement is an expression with a semicolon after it: `1;`, `!false;`
+
+### Bindings
+
